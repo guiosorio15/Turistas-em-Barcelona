@@ -24,5 +24,5 @@ Validar com `uv run --locked turistas validate outputs/submissions/Turistas_de_l
 A execução guarda manifesto local com hashes e parâmetros. Para a entrega final, identificar commit, dependências, limitações e comando exato.
 
 ## Limitações e entrega
-Dataset inicial incompleto; pipeline real ainda não executada. Teste noutro sistema operativo e clone remoto por fazer.
+Dataset inicial incompleto; pipeline real ainda não executada. Clone local independente validado em Linux, incluindo ambiente limpo, seis testes e avaliação pública. Testes noutros sistemas operativos e clone remoto por fazer.
 Entregar CSV e este relatório finalizado com o nome da equipa, mais URL público do código, conforme `vendor/mtah/SUBMISSION.md`.

@@ -22,7 +22,7 @@ uv run --locked python -m unittest discover -s tests -v
 
 `check-data` devolve erro enquanto faltarem assets. A avaliação das quatro baselines incluídas funciona sem dataset.
 O `uv` instala o Python 3.11 e as versões fixadas em `uv.lock`.
-[Guia completo para Linux, macOS e Windows](docs/ambiente/instalacao.md).
+[Guia completo para Linux, macOS e Windows](docs/ambiente/instalacao.md). [Verificações e limites](docs/ambiente/verificacao.md).
 
 ## Com os dados autorizados
 

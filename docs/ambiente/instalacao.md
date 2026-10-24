@@ -17,8 +17,8 @@ uv run --locked turistas evaluate
 uv run --locked python -m unittest discover -s tests -v
 ```
 
-Não é necessário ativar o ambiente virtual. Para notebooks: `uv sync --locked --extra notebooks` e `uv run --locked jupyter notebook`.
-O extra de notebooks está fixado no lock; a validação inicial cobre o ambiente base, não a interface Jupyter nem todos os sistemas operativos.
+Não é necessário ativar o ambiente virtual. Para notebooks: `uv sync --locked --extra notebooks` e `uv run --locked --extra notebooks jupyter notebook`.
+O extra de notebooks está fixado no lock e foi instalado em Linux; imports de kloppy/metrica, matplotlib e notebook verificados. A interface gráfica e os restantes sistemas operativos ainda não foram testados.
 
 ## Dados
 Copiar os dados autorizados separadamente, nunca através de Git. Preferir `--data-dir "/caminho com espaços/dataset"`.
