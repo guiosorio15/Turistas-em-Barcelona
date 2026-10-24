@@ -10,10 +10,11 @@ A missão: transformar tracking imperfeito e contexto tático em sequências coe
 ## Arrancar em minutos
 
 Instala [Git](https://git-scm.com/) e [uv](https://docs.astral.sh/uv/getting-started/installation/).
-Depois de este repositório estar publicado, clona o URL da equipa e entra na pasta clonada.
-Enquanto o URL não existir, podes copiar esta pasta para outro computador, incluindo os ficheiros ocultos.
+Clona o repositório da equipa (é necessário acesso ao repositório privado):
 
 ```bash
+git clone git@github.com:guiosorio15/Turistas-em-Barcelona.git
+cd Turistas-em-Barcelona
 uv sync --locked
 uv run --locked turistas check-data
 uv run --locked turistas evaluate
@@ -76,4 +77,4 @@ tests/              verificações da integração
 3. Consultar [CONTRIBUTING.md](CONTRIBUTING.md) e [AGENTS.md](AGENTS.md).
 
 Código oficial sob licença MIT em `vendor/mtah/LICENSE`. A licença do código da equipa ainda está por decidir. O dataset tem termos separados e não é redistribuível.
-URL do repositório da equipa: **?** — repositório Git local preparado, ainda sem publicação.
+Repositório da equipa: [guiosorio15/Turistas-em-Barcelona](https://github.com/guiosorio15/Turistas-em-Barcelona), privado durante o desenvolvimento. A entrega exige torná-lo público. O commit inicial criado no GitHub foi preservado no histórico.

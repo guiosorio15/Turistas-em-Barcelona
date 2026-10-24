@@ -14,7 +14,7 @@
 
 Não foi possível executar a baseline no jogo real: faltam os dois ficheiros de tracking tático. Apenas o Smart Tagging está disponível.
 Não foi testada a interface gráfica Jupyter, Windows ou macOS. A CI está preparada para os três sistemas, mas ainda não correu num remoto.
-Não há URL remoto da equipa nem publicação. O histórico local inclui a estrutura preparada.
+Remoto configurado: `git@github.com:guiosorio15/Turistas-em-Barcelona.git`, privado. O commit inicial criado no GitHub foi integrado por merge, preservando ambos os históricos. A validação inicial por clone local mantém-se aplicável; a CI remota terá o seu próprio estado no GitHub.
 
 ## Particularidade deste computador
 

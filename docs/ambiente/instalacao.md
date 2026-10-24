@@ -4,8 +4,15 @@ Pré-requisitos: Git, acesso à Internet na primeira instalação e uv. Seguir a
 O projeto fixa Python 3.11 em `.python-version`; uv obtém essa versão e cria `.venv`.
 
 ## Clonar
-O URL da equipa é `?`. Quando existir, executar `git clone <URL_DA_EQUIPA>` e entrar na pasta.
-Não clonar apenas o upstream: esse não contém a integração da equipa. Até à publicação, copiar a pasta completa, incluindo `.git`, excluindo `.venv` e caches.
+O repositório é privado; a conta precisa de acesso e de uma chave SSH configurada no GitHub.
+
+```bash
+git clone git@github.com:guiosorio15/Turistas-em-Barcelona.git
+cd Turistas-em-Barcelona
+```
+
+Em alternativa, clonar por HTTPS: `https://github.com/guiosorio15/Turistas-em-Barcelona.git`, usando autenticação GitHub.
+O repositório da equipa contém a integração completa; o upstream dos organizadores contém apenas a referência oficial.
 
 ## Linux, macOS e Windows PowerShell
 Os comandos seguintes são iguais nos três sistemas, executados na raiz:
