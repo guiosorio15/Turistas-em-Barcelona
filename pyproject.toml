@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "turistas-de-la-nave"
+version = "0.1.0"
+description = "Posse de bola reproduzível — More Than a Hack 2027"
+requires-python = ">=3.11,<3.12"
+dependencies = ["numpy", "pandas"]
+
+[project.optional-dependencies]
+notebooks = ["kloppy==3.18.0", "matplotlib", "notebook"]
+
+[project.scripts]
+turistas = "turistas.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/turistas"]
+
+[tool.uv]
+package = true
