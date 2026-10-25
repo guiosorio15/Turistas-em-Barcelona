@@ -18,3 +18,13 @@ Marcos propostos; não são prazos comunicados pelos organizadores.
 - [ ] Validar CSV, documento e reprodução final.
 
 **Próximo passo:** obter as restantes partes do dataset e executar `uv run --locked turistas check-data --baseline-only`.
+A fila técnica detalhada vive em `../[04] Método/[05] Plano de experimentos.md` (E0–E11).
+
+## Revisão de 2026-10-24 (após investigação)
+
+O plano original assumia construir o modelo do zero, só com heurísticas. A investigação mudou duas coisas:
+
+1. **O piso real é ~0,61 `spellF1`** (medido por uma equipa em 7 jogos DFL), não 0,2433. O marco 3 ("primeiro modelo") tem de ser avaliado contra esse valor, não contra a baseline.
+2. **A validação tem de ser em outros jogos.** Sem isso, qualquer decisão é opinião. Passa a ser o marco 1b, antes do modelo.
+
+Ordem revista: dados → **protocolo DFL** → baseline aprendida → descodificador com durações → bordas → sequência/ensemble → entrega.

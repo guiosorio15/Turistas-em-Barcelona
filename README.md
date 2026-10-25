@@ -23,7 +23,7 @@ uv run --locked python -m unittest discover -s tests -v
 
 `check-data` devolve erro enquanto faltarem assets. A avaliação das quatro baselines incluídas funciona sem dataset.
 O `uv` instala o Python 3.11 e as versões fixadas em `uv.lock`.
-[Guia completo para Linux, macOS e Windows](docs/ambiente/instalacao.md). [Verificações e limites](docs/ambiente/verificacao.md).
+[Guia completo para Linux, macOS e Windows](docs/[05]%20Operação/[01]%20Instalação.md). [Verificações e limites](docs/[05]%20Operação/[03]%20Verificação%20e%20CI.md).
 
 ## Com os dados autorizados
 
@@ -61,10 +61,14 @@ src/turistas/       CLI e implementação da equipa
 configs/            parâmetros versionados
 vendor/mtah/        referência oficial preservada, incluindo scorer e baselines
 notebooks/          exploração; lógica reutilizável fica em src/
-docs/projeto/       visão, equipa, plano, ideias e decisões
-docs/tecnica/       arquitetura, dados, avaliação e relatório
-docs/ambiente/      instalação, dataset e comandos
-docs/referencias/   notas originais da equipa e imagens
+docs/[00] Índice.md portal da documentação (começar aqui)
+docs/[01] Competição/ regras, métricas, calendário e perguntas abertas
+docs/[02] Dados/      inventário, ATD, Smart Tagging, homografia e broadcast
+docs/[03] Investigação/ papers, repositórios, concorrência e resultados negativos
+docs/[04] Método/     arquitetura, features, decodificação, avaliação e experimentos
+docs/[05] Operação/   instalação, comandos e verificação
+docs/[06] Registo/    decisões, diário, equipa e plano de trabalho
+docs/[99] Arquivo/    notas originais da equipa e imagens
 data/               assets autorizados, locais
 outputs/            submissões e relatórios gerados, locais
 tests/              verificações da integração
@@ -72,9 +76,11 @@ tests/              verificações da integração
 
 ## Começar a contribuir
 
-1. Ler a [visão geral](docs/projeto/visao-geral.md) e as [ideias](docs/projeto/ideias.md).
-2. Escolher uma frente no [plano da equipa](docs/projeto/equipa.md).
-3. Consultar [CONTRIBUTING.md](CONTRIBUTING.md) e [AGENTS.md](AGENTS.md).
+1. Abrir o [índice da documentação](docs/[00]%20Índice.md).
+2. Ler a [visão geral](docs/[01]%20Competição/[01]%20Visão%20geral.md) e as [ideias](docs/[03]%20Investigação/[05]%20Ideias.md).
+3. Perceber o que já falhou em [resultados negativos](docs/[03]%20Investigação/[04]%20Resultados%20negativos.md).
+4. Escolher uma frente no [plano de trabalho](docs/[06]%20Registo/[04]%20Plano%20de%20trabalho.md) e na [equipa](docs/[06]%20Registo/[03]%20Equipa.md).
+5. Consultar [CONTRIBUTING.md](CONTRIBUTING.md) e [AGENTS.md](AGENTS.md).
 
 Código oficial sob licença MIT em `vendor/mtah/LICENSE`. A licença do código da equipa ainda está por decidir. O dataset tem termos separados e não é redistribuível.
 Repositório da equipa: [guiosorio15/Turistas-em-Barcelona](https://github.com/guiosorio15/Turistas-em-Barcelona), privado durante o desenvolvimento. A entrega exige torná-lo público. O commit inicial criado no GitHub foi preservado no histórico.

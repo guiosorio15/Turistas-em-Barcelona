@@ -6,6 +6,8 @@ Equipa: **Turistas de la Nave**, cinco elementos. Organizadores: Metrica Sports,
 Gerar por algoritmo um CSV válido e reproduzível para todos os 199 319 frames do jogo Barcelona–Athletic, entregar código público e documento técnico até 2026-11-17.
 Pretendemos superar a baseline oficial; ainda não há resultados de um modelo próprio.
 
+**Referência real (2026-10-24):** a baseline oficial está em `spellF1` 0,2433 no jogo completo, mas uma equipa concorrente publicou **0,610** em 7 jogos DFL held-out com o mesmo tipo de dados. É esse o nível a bater, não a baseline. Ver `../[03] Investigação/[03] Concorrência pública.md`.
+
 ## Problema
 `H` e `A` representam posse com bola em jogo; `D` representa interrupção. `X` é abstenção.
 Uma bola dividida não cria um estado novo: mantém-se a última equipa até haver controlo adversário.

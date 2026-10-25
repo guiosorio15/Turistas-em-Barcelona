@@ -23,3 +23,21 @@ O verificador confirma presença e tamanho não nulo; não certifica integridade
 A baseline usa tracking tático. A câmara broadcast é opcional para a abordagem e tem uma timeline diferente.
 Nunca usar caminhos absolutos pessoais em código; passar `--data-dir` ou `MTAH_DATA_DIR`.
 Não publicar assets nem derivados que permitam reconstruí-los. Não enviar para serviços de IA alojados.
+
+## Estado da receção do pacote
+
+| Data | Estado | Detalhe |
+|---|---|---|
+| 2026-10-24 | pacote inicial incompleto | só `tactical/BAR-ATH_tactical_smart_tagging.xml` |
+| 2026-10-24 21:43 | **download parado a 4,31 GB** | ficheiro temporário `Não confirmado *.crdownload` no `Downloads`; deixou de crescer às 21:43:23. Verificar no browser se está à espera de confirmação ("Manter") ou em pausa |
+
+Comando de verificação quando o pacote estiver descompactado:
+
+```bash
+uv run --locked turistas check-data --data-dir "/caminho/dataset"
+```
+
+Critério de "tudo lá": os **9** assets listados acima, todos com tamanho > 0. Se faltar algum, `check-data` devolve código 1 e diz qual.
+
+⚠️ Um `BAR-ATH_broadcast-002.mp4` chegou a existir em `Downloads` e já não existe (resta o atalho em `Recent`). Se o pacote atual vier com nomes numerados, normalizar os nomes para o contrato acima — **o código não adivinha nomes**.
+
