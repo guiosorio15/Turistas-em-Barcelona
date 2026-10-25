@@ -14,5 +14,8 @@
 | 2026-10-24 | Não ajustar pesos/offsets na janela pública (nem "só quatro") | Duas equipas fizeram-no; é risco de desqualificação |
 | 2026-10-24 | Reimplementar ideias da concorrência, não copiar código | Atribuição limpa e compreensão real; copiar dá no máximo um empate |
 | 2026-10-24 | Prioridade a bordas de interrupção e durações, não a deteção de bola | Teto medido da bola perfeita: +0,03; bordas erram segundos |
+| 2026-10-25 | Montar os 9 assets em `data/` (vídeos copiados com reflink) e correr E0 | Validar a pipeline com dados reais sem duplicar espaço físico |
+| 2026-10-25 | Baseline real é o fallback; só substituir com ganho medido em DFL | O objetivo é bater 0,2433, não publicar uma variante pior |
+| 2026-10-25 | A referência DFL ~0,61 não é o piso do jogo-alvo | Protocolos e convenções diferentes; o alvo verificado é 0,2433 |
 
-A licença do código da equipa e o URL remoto estão por decidir (`?`).
+O URL remoto foi decidido em 2026-10-24. A licença do código da equipa continua por decidir (`?`).

@@ -32,7 +32,7 @@ Sem olhar a etiqueta nenhuma:
 
 | Verificação | Esperado | Porquê |
 |---|---|---|
-| Nº de posses previstas | 250–350 | baseline faz 594; o líder 293 |
+| Nº de posses previstas | 250–350 | baseline `smooth50` faz 669 (medido em 2026-10-25); o líder 293 |
 | % de frames `D` | ~45–50 % | 106 min avaliados, ~55 de bola em jogo |
 | Nº de paragens | ~108 (literatura) | Siegle & Lames 2012 |
 | Concordância com `SET PIECES` | ≥90 % dos set pieces com recomeço a ±2 s | 58 set pieces |

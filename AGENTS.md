@@ -67,4 +67,5 @@ Nenhuma ideia deve ser descartada por parecer pouco ortodoxa. Uma ideia descarta
 
 ## Estado inicial
 A CLI reproduz a baseline oficial; ainda não implementa um modelo melhorado.
+Em 2026-10-25 os 9 assets foram montados localmente em `data/` (incluindo os dois vídeos) e a baseline real foi validada. O CSV gerado é byte-a-byte igual ao `baseline_smooth50` oficial; `check-data` passou 9/9. O próximo trabalho é o modelo próprio, não mais preparação de dados.
 Consultar `docs/[06] Registo/[04] Plano de trabalho.md` para o próximo trabalho, `docs/[04] Método/[05] Plano de experimentos.md` para a fila técnica e `docs/[03] Investigação/[05] Ideias.md` para as hipóteses em aberto. A documentação começa em `docs/[00] Índice.md`.

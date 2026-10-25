@@ -1,4 +1,4 @@
-# Verificação inicial — 2026-10-24
+# Verificação — 2026-10-24/25
 
 - Python 3.11 obtido por uv; ambiente base e lock instalados com sucesso.
 - Seis testes passaram: dados em falta, precedência do caminho explícito, contrato CSV, configuração segura, encaminhamento para scorer público e reprodução sintética.
@@ -9,11 +9,13 @@
 - Todos os ficheiros exportados do upstream coincidem byte a byte com o commit registado em `vendor/mtah/UPSTREAM.md`.
 - Ligações Markdown locais da documentação da equipa verificadas.
 - Git apenas acompanha os README de `data/` e `outputs/`; assets e resultados locais excluídos.
+- **E0 em 2026-10-25:** os 9 assets foram montados localmente; `check-data` passou 9/9. `turistas reproduce` gerou 199 319 linhas, **669 posses** e 35,9% `D`; o CSV é byte-a-byte igual ao `baseline_smooth50` oficial (`sha256 6d4e04b8...`).
+- `turistas evaluate --results outputs/submissions --bootstrap 1000`: `spellF1` público **0,3256** (IC bootstrap 0,214–0,447) e `macroF1` **0,6207**. A amostra de 17 posses não ordena variantes.
 
 ## Limites
 
-Não foi possível executar a baseline no jogo real: faltam os dois ficheiros de tracking tático. Apenas o Smart Tagging está disponível.
-Não foi testada a interface gráfica Jupyter, Windows ou macOS. A CI está preparada para os três sistemas, mas ainda não correu num remoto.
+A baseline real foi executada em 2026-10-25; a limitação de dados está resolvida neste checkout. O modelo próprio ainda não existe.
+Não foi testada a interface gráfica Jupyter, Windows ou macOS. A CI está preparada para os três sistemas; confirmar no GitHub se já correu no remoto.
 Remoto configurado: `git@github.com:guiosorio15/Turistas-em-Barcelona.git`, privado. O commit inicial criado no GitHub foi integrado por merge, preservando ambos os históricos. A validação inicial por clone local mantém-se aplicável; a CI remota terá o seu próprio estado no GitHub.
 
 ## Particularidade deste computador

@@ -24,7 +24,7 @@ Tudo o que entra no sistema, o que promete e o que falha.
 ## As três frases que definem a dificuldade
 
 1. **A bola falta em 41 % dos frames avaliados**, em blocos longos — não em frames soltos.
-2. **A maior parte dos frames sem bola é bola morta**; o resto é multidão e bola no ar.
+2. **Boa parte dos frames sem bola coincide com bola morta**, mas o contrário não é verdade: há períodos `D` com bola visível. A proporção exata está por medir neste tracking; não assumir que "sem bola" = "bola morta".
 3. **As lacunas curtas já foram colmatadas pelo fornecedor**: quase não há lacunas entre 1 e 3 s, e sobram ~133 com 3 s ou mais.
 
 Fonte: `vendor/mtah/DATA.md`; medições de lacunas confirmadas por duas equipas concorrentes (ver `docs/[03] Investigação/[03] Concorrência pública.md`).

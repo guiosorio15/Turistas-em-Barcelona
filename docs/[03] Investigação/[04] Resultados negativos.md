@@ -21,7 +21,7 @@
 
 - **Otimizar `accuracy` por frame.** Uma submissão constante numa classe pontua "bem" em acurácia e ~0 em `spellF1`.
 - **Avaliar com os 5 minutos.** ±0,06 por posse.
-- **Contar posses sem comparar com ~108 paragens/jogo.** Um sistema que produz 594 posses (baseline) está a inventar.
+- **Contar posses sem comparar com ~108 paragens/jogo.** Um sistema que produz 669 posses (baseline `smooth50`, medida em 2026-10-25) está a inventar.
 
 ## Como acrescentar
 

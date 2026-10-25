@@ -7,7 +7,7 @@ Portal único da documentação. Cada secção tem o seu próprio `[00] Índice.
 - Equipa: **Turistas de la Nave** (5 elementos, nomes a confirmar)
 - Prova: **More Than a Hack 2027 — Fase 1: Ball Possession**
 - Entrega: **2026-11-17**
-- Estado: ambiente e baseline reproduzíveis; **sem modelo próprio**; investigação iniciada em 2026-10-24.
+- Estado: ambiente e baseline validados com tracking real em 2026-10-25; **sem modelo próprio**; investigação iniciada em 2026-10-24.
 
 ## Mapa
 

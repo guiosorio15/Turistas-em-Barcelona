@@ -5,7 +5,7 @@
 Equipa de cinco elementos no **More Than a Hack 2027 — Fase 1: Ball Possession**.
 A missão: transformar tracking imperfeito e contexto tático em sequências coerentes de posse de bola.
 
-> Estado: estrutura e ambiente preparados; baseline oficial integrada. Modelo próprio por desenvolver. Dataset local incompleto.
+> Estado: ambiente e baseline oficial validados com tracking real; o CSV gerado é byte-a-byte igual ao `baseline_smooth50` oficial. Modelo próprio por desenvolver.
 
 ## Arrancar em minutos
 
@@ -37,6 +37,7 @@ uv run --locked turistas evaluate --results outputs/submissions
 ```
 
 A reprodução gera a baseline `smooth50`, o CSV da equipa e um manifesto com hashes, versão do código e parâmetros. **É um ponto de partida, não uma solução melhorada.**
+Neste checkout, com os 9 assets locais, a baseline real foi reproduzida: `spellF1` público 0,3256, `macroF1` 0,6207, 669 posses no jogo completo e CSV byte-a-byte igual ao oficial (`sha256 6d4e04b8...`).
 Dados, resultados e relatórios gerados ficam locais. Nunca adicionar os dados restritos ao Git.
 
 ## O desafio

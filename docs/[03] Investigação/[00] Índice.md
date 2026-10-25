@@ -12,7 +12,7 @@ O que já se sabe antes de escrever uma linha de código. **Ler esta secção po
 
 ## As três conclusões que mudam a estratégia
 
-1. **O piso real não é 0,243.** É ~**0,61** em 7 jogos externos, medido por uma equipa que publicou código e números. Bater a baseline oficial é trivial; bater 0,61 é o objetivo.
+1. **A referência externa é ~0,61, não 0,243.** Em 7 jogos DFL, uma equipa mediu ~**0,61**; não é o piso do jogo-alvo. O alvo verificado é 0,2433 (baseline full) e 0,3256 (público). Bater a baseline oficial é o primeiro marco; 0,61 é referência do protocolo DFL.
 2. **A etiqueta é mecânica.** Vem do tracking *corrigido*, não de um analista: `D` onde a bola está morta, senão a equipa que o tracker nomeia. Estamos a imitar um tracker, não a decidir futebol.
 3. **A métrica é segmentação.** `spellF1` conta posses inteiras; um frame a frame brilhante com flicker pontua zero. O descodificador vale tanto como as features.
 

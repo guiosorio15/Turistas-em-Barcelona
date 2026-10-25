@@ -8,7 +8,7 @@ O classificador diz "neste frame, 0,62 para H". A métrica não pontua isso: pon
 
 - Um classificador a 90 % por frame que alterna de label a cada 2 frames cria **centenas de posses falsas** e pontua perto de 0.
 - Uma posse recuperada na perfeição mas **1 s atrasada** vale ~0,65.
-- A baseline `smooth50` ilustra: 594 posses previstas num jogo com ~108 paragens.
+- A baseline `smooth50` ilustra: 669 posses previstas num jogo com ~108 paragens (medido em 2026-10-25).
 
 ## Formulação
 

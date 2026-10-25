@@ -6,8 +6,8 @@ Cada linha é uma experiência com ID, hipótese e critério de decisão. Só se
 
 | ID | Experiência | Depende de | Métrica de decisão | Estado |
 |---|---|---|---|---|
-| **E0** | Verificar o pacote de dados (9 assets) e correr a baseline real | download | `check-data` limpo | a fazer |
-| **E1** | Loader DFL + degradação + `leave-one-match-out` | E0 | pipeline corre nos 7 jogos | a fazer |
+| **E0** | Verificar o pacote de dados (9 assets) e correr a baseline real | download | `check-data` limpo | **concluído 2026-10-25** |
+| **E1** | Loader DFL + degradação + `leave-one-match-out` | E0 | pipeline corre nos 7 jogos | a fazer — **timebox 2 dias** |
 | **E2** | Baseline aprendida: 3 classificadores + Viterbi de custo fixo | E1 | `spellF1` DFL (esperado ~0,58–0,61) | a fazer |
 | **E3** | Ablação de features (só bola / só forma / ambas / + contexto temporal) | E2 | `spellF1` DFL | a fazer |
 | **E4** | Descodificador: custo fixo vs **HSMM com durações aprendidas** | E2 | `spellF1` DFL + nº de posses | a fazer |
@@ -25,11 +25,11 @@ Cada linha é uma experiência com ID, hipótese e critério de decisão. Só se
 - Se E5 não der ganho em DFL, não insistir: registar como negativo.
 - Nada de E11 antes de E4/E5/E6 estarem fechados.
 
-## Calendário de trabalho (24 dias até à entrega)
+## Calendário de trabalho (23 dias até à entrega, a partir de 2026-10-25)
 
 | Semana | Foco |
 |---|---|
-| 24–27 out | E0–E2: dados, loader DFL, primeira baseline honesta |
+| 25–27 out | E0 concluído; E1–E2: loader DFL e primeira baseline honesta |
 | 28–31 out | E3–E4: ablações e descodificador com durações |
 | 1–5 nov | E5: bordas e bola fora (maior oportunidade) |
 | 6–10 nov | E6–E7: sequência e ensemble |
@@ -41,4 +41,6 @@ Cada linha é uma experiência com ID, hipótese e critério de decisão. Só se
 | Data | ID | Comando | Resultado | Nota |
 |---|---|---|---|---|
 | 2026-10-24 | — | `uv run --locked turistas evaluate` | baseline pública reproduzida | ver `outputs/evaluation/` |
-| 2026-10-24 | E0 | download do pacote | em curso (~4,3 GB) | ver `docs/[02] Dados/[01] Pacote local.md` |
+| 2026-10-24 | E0 | download do pacote | concluído depois | ZIPs + MP4 em `~/Downloads` |
+| 2026-10-25 | E0 | `turistas check-data` + `turistas reproduce` | 9/9 assets; 199 319 linhas; 669 posses; 35,9% `D` | CSV byte-a-byte igual ao oficial (`sha256 6d4e04b8...`) |
+| 2026-10-25 | E0 | `turistas evaluate --results outputs/submissions --bootstrap 1000` | `spellF1` 0,3256; `macroF1` 0,6207; IC 0,214–0,447 | 17 posses; não usar para escolher variantes |
