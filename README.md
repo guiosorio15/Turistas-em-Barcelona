@@ -5,7 +5,7 @@
 Equipa de cinco elementos no **More Than a Hack 2027 — Fase 1: Ball Possession**.
 A missão: transformar tracking imperfeito e contexto tático em sequências coerentes de posse de bola.
 
-> Estado: ambiente e baseline oficial validados com tracking real; o CSV gerado é byte-a-byte igual ao `baseline_smooth50` oficial. Modelo próprio por desenvolver.
+> Estado: baseline oficial validada com tracking real e primeiro modelo próprio (E2) treinado em 7 jogos DFL; LOMO concluído em 0,525 ± 0,037. Os labels e o score da baseline são iguais ao oficial; neste Windows o hash difere só por CRLF vs LF. E5/E2b/E5b testados e negativos; E2 congelado.
 
 ## Arrancar em minutos
 
@@ -37,8 +37,31 @@ uv run --locked turistas evaluate --results outputs/submissions
 ```
 
 A reprodução gera a baseline `smooth50`, o CSV da equipa e um manifesto com hashes, versão do código e parâmetros. **É um ponto de partida, não uma solução melhorada.**
-Neste checkout, com os 9 assets locais, a baseline real foi reproduzida: `spellF1` público 0,3256, `macroF1` 0,6207, 669 posses no jogo completo e CSV byte-a-byte igual ao oficial (`sha256 6d4e04b8...`).
+Neste checkout, com os assets de tracking locais, a baseline real foi reproduzida: `spellF1` público 0,3256, `macroF1` 0,6207 e 669 posses no jogo completo. Os labels e o score são iguais ao oficial; em Windows o hash difere apenas por CRLF vs LF.
 Dados, resultados e relatórios gerados ficam locais. Nunca adicionar os dados restritos ao Git.
+
+## Modelo próprio (E2)
+
+Pipeline: features coletivas sem identidades → GBM de 3 classes → Viterbi de 3 estados. Treino e afinação só em 7 jogos DFL/Sportec (CC-BY 4.0), com degradação do tracking (41% bola em falta, lacunas longas, jogadores em falta, ruído). O jogo fornecido entra apenas como input; o GT público serve só para contrato e sanidade.
+
+| Medição | Resultado |
+|---|---|
+| DFL degradado, split período 1→2 no J03WMX | `spellF1` **0,443** (244 posses previstas vs 261) |
+| Jogo completo, modelo dos 7 jogos | 43,1% `D`; 415 posses; 8,7 s |
+| Público isolado, modelo dos 7 jogos | `spellF1` 0,5455; 27 posses; ±0,25 — **não é seleção** |
+| LOMO 7 jogos | **0,525 ± 0,037** (macro 0,868) |
+
+Comando de inferência:
+
+```bash
+uv run --locked python scripts/predict_target.py \
+  --model models/e1_dfl_v3.joblib \
+  --output outputs/submissions/Turistas_de_la_Nave.csv
+```
+
+A regra de bola fora, os três classificadores e os componentes do E5b (4 estados, p90, etapa física) foram testados em DFL e pioraram; o E2 está congelado. E4/HSMM fica adiado sem um prior externo adequado; E6 (TCN + SkillCorner) é o caminho restante.
+
+Treino reproduzível: `uv sync --locked --extra notebooks`, `uv run --locked python scripts/fetch_dfl.py`, `uv run --locked --extra notebooks python scripts/train_model.py`.
 
 ## O desafio
 
@@ -60,6 +83,8 @@ Os cinco minutos públicos verificam o funcionamento; não são dados de treino 
 ```text
 src/turistas/       CLI e implementação da equipa
 configs/            parâmetros versionados
+models/             artefacto do modelo próprio (treinado em DFL público)
+scripts/            aquisição DFL, treino e inferência
 vendor/mtah/        referência oficial preservada, incluindo scorer e baselines
 notebooks/          exploração; lógica reutilizável fica em src/
 docs/[00] Índice.md portal da documentação (começar aqui)

@@ -58,3 +58,14 @@ Viterbi em dois estágios, determinístico, ~3 min. Menos documentado publicamen
 1. **Todos convergem** em: features geométricas → classificador → Viterbi. O que difere é o treino (DFL vs auto-supervisão) e o refinamento.
 2. **Ninguém resolveu** as bordas de interrupção, as posses curtas (<1,5 s) nem usou modelos de sequência.
 3. **O código público é assimétrico:** quem publica cedo perde vantagem; quem publica bem ganha reputação. Nós devemos manter o repo privado até à entrega (o `RULES.md` exige público **na entrega**).
+
+## Varrimento de 2026-11-08
+
+O ecossistema cresceu para **50+ repositórios**. Para além dos três acima, os métodos fortes são:
+
+- **Agamemnon** — TCN dilatada (~20 s) + Viterbi + snap ao toque; 27 jogos externos; **0,681** `spellF1` externo.
+- **Suleyman** — HSMM/Viterbi hierárquico físico, sem dados externos; **0,5714** público; full 239 posses/45,8% `D`.
+- **HSA Connection** — DFL + Metrica, degradação e seleção de custos; **0,477** DFL degradado / 0,646 Metrica.
+- **AOM** — especialistas de lacuna/borda; **0,631** limpo / **0,516** moderado; quatro convenções de labels.
+
+O detalhe, os scores e as fontes estão em [06] Métodos 2026-11-08. A lição comum: GBM/TCN + Viterbi + degradação + bordas/recomeços + mais dados externos (SkillCorner).

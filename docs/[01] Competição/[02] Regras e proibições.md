@@ -52,3 +52,22 @@ Consequências práticas para nós:
 ## Se estivermos perto da linha
 
 Perguntar **antes** de construir. Uma resposta antes do prazo vale mais do que uma desqualificação depois. Ver [05] Perguntas abertas.
+
+## Atualização oficial de 2026-11-07
+
+Mensagem dos organizadores recebida pela equipa; **tem precedência** sobre documentação, e-mails anteriores e respostas individuais.
+
+**Não permitido**
+- Verificar a saída contra o vídeo.
+- Etiquetas manuais, dados humanos ou qualquer dado criado à mão sobre o jogo fornecido.
+- Enviar os dados fornecidos para serviços de IA.
+- Treinar, ajustar ou calibrar o algoritmo no ground truth de posse ou no vídeo fornecido.
+
+**Permitido**
+- Verificações automáticas usando apenas os dados fornecidos.
+- Inspecionar os dados e o vídeo para compreender o que conta como posse.
+- Usar como input o vídeo, o tracking automático, o Smart Tagging ou outros dados gerados, desde que o algoritmo não tenha sido treinado no GT nem no vídeo.
+- Fornecer ficheiros de passos intermédios.
+- Usar qualquer dataset cuja licença o permita.
+
+**Consequência para nós:** treino, hiperparâmetros e custos de transição só em DFL/outros jogos. O público serve para contrato, alinhamento e semântica — nunca para escolher variantes. Não comparar a saída com o vídeo.

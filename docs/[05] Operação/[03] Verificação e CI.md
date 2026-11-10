@@ -14,7 +14,16 @@
 
 ## Limites
 
-A baseline real foi executada em 2026-10-25; a limitação de dados está resolvida neste checkout. O modelo próprio ainda não existe.
+A baseline real foi executada em 2026-10-25; a limitação de dados está resolvida neste checkout. O modelo E2 existe, a submissão é válida e o LOMO está concluído; E5/E2b negativos e E2 congelado.
+
+## 2026-11-07 — E1/E2 e modelo próprio
+
+- **9 testes passam** com `PYTHONPATH=src`: 6 de integração, parser ATD e Viterbi.
+- O editable install do uv falha neste path por `[01]`/`Cérebro` (o `.pth` é lido em cp1252). Num clone sem esses caracteres, `uv run --locked` funciona. Workaround local: `PYTHONPATH=src`.
+- `turistas evaluate` falha neste path porque o scorer oficial usa `glob` sobre `[01]`; correr com `--gt` explícito e `--results` relativo.
+- Baseline: 199 319 linhas, 669 posses, 35,9% `D`, `spellF1` 0,3256; labels iguais ao oficial; o hash difere por CRLF vs LF.
+- Modelo E2: 7 jogos DFL; 1 002 644 frames; DFL degradado **0,443**; LOMO **0,525 ± 0,037**; full-match **43,1% `D`/415 posses**; público **0,5455** (sanidade, não seleção).
+- E5/E2b testados e negativos: bola fora 0,403–0,421 e três classificadores 0,411 vs 0,443; N13/N14. E2 congelado.
 Não foi testada a interface gráfica Jupyter, Windows ou macOS. A CI está preparada para os três sistemas; confirmar no GitHub se já correu no remoto.
 Remoto configurado: `git@github.com:guiosorio15/Turistas-em-Barcelona.git`, privado. O commit inicial criado no GitHub foi integrado por merge, preservando ambos os históricos. A validação inicial por clone local mantém-se aplicável; a CI remota terá o seu próprio estado no GitHub.
 

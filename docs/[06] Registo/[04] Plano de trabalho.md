@@ -9,15 +9,16 @@ Marcos propostos; não são prazos comunicados pelos organizadores.
 5. **Entrega:** congelar dependências e configuração, regenerar CSV, comparar hashes, validar o ficheiro exato, terminar relatório e submeter até 2026-11-17.
 
 ## Checklist
-- [x] Obter tracking, vídeos e homografias em falta.
+- [ ] Obter os dois vídeos; tracking, homografia e Smart Tagging já estão.
 - [ ] Confirmar nomes e frentes dos cinco elementos.
 - [x] Criar e configurar URL Git da equipa.
 - [x] Reproduzir baseline com dados reais.
-- [ ] Implementar e verificar modelo próprio.
+- [x] Implementar e verificar modelo próprio. (E2; LOMO 0,525 ± 0,037)
 - [ ] Testar num segundo computador a partir de um clone.
-- [ ] Validar CSV, documento e reprodução final.
+- [x] Validar CSV e documento no checkout atual.
+- [ ] Testar a reprodução num clone limpo e submeter.
 
-**Próximo passo:** implementar o primeiro modelo próprio (E1–E2) e manter a baseline `smooth50` como fallback. O caminho crítico deixou de ser os dados.
+**Próximo passo:** LOMO fechado (**0,525 ± 0,037**); E5/E2b/E5b testados e negativos; resta **E6 (TCN + SkillCorner)** ou congelar o E2 e validar a entrega/reprodução. O modelo dos 7 jogos é o candidato; a baseline `smooth50` continua como fallback.
 A fila técnica detalhada vive em `../[04] Método/[05] Plano de experimentos.md` (E0–E11).
 
 ## Revisão de 2026-10-24 (após investigação)
@@ -28,6 +29,13 @@ O plano original assumia construir o modelo do zero, só com heurísticas. A inv
 2. **A validação tem de ser em outros jogos.** Sem isso, qualquer decisão é opinião. Passa a ser o marco 1b, antes do modelo.
 
 Ordem revista: dados → **protocolo DFL** → baseline aprendida → descodificador com durações → bordas → sequência/ensemble → entrega.
+
+## Revisão de 2026-11-07 (E1/E2)
+
+- 7 jogos DFL carregados; features coletivas, degradação e Viterbi implementados.
+- DFL degradado: **0,443** no split período 1→2 do J03WMX (244 posses previstas vs 261).
+- Jogo completo: **43,1% `D`**, **415 posses**, 8,7 s. Público isolado: **0,5455** (17 posses; não seleção).
+- LOMO fechado: **0,525 ± 0,037**. E5/E2b/E5b testados e negativos (N13–N17); E2 congelado. E4/HSMM adiado; E6 (TCN + SkillCorner) é o caminho restante.
 
 ## Revisão de 2026-10-25 (E0 concluído)
 

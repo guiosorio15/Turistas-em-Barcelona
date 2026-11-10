@@ -7,7 +7,7 @@ name = "turistas-de-la-nave"
 version = "0.1.0"
 description = "Posse de bola reproduzível — More Than a Hack 2027"
 requires-python = ">=3.11,<3.12"
-dependencies = ["numpy", "pandas"]
+dependencies = ["numpy", "pandas", "scikit-learn"]
 
 [project.optional-dependencies]
 notebooks = ["kloppy==3.18.0", "matplotlib", "notebook"]

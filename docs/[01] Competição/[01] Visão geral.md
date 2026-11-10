@@ -16,7 +16,7 @@ Um toque ou desvio não implica mudança de posse. Separar interrupções de tro
 ## Recursos e dificuldades
 Tracking automático, duas câmaras, Smart Tagging e homografias. A bola falta em 41% dos frames avaliados; há fragmentação e trocas de identidade.
 A referência temporal da submissão é o vídeo tático a 25 fps. Broadcast não está alinhado diretamente.
-O dataset local inicial está incompleto; consultar `../ambiente/dataset.md`.
+O dataset local está quase completo (7/9; faltam os vídeos); consultar [Pacote local](../[02]%20Dados/[01]%20Pacote%20local.md).
 
 ## Calendário oficial publicado
 - Inscrições: 2026-10-01.

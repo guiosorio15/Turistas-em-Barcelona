@@ -150,8 +150,12 @@ def main(argv=None):
         if args.command == "validate":
             run_official("evaluation/validate_submission.py", Path(args.csv).resolve())
         elif args.command == "evaluate":
-            run_official("evaluation/run_evaluation.py", "--gt", "public", "--results",
-                         Path(args.results).resolve(), "--out", Path(args.out).resolve(),
+            gt = VENDOR / "evaluation/gt/BAR-ATH_possession_gt_public.csv"
+            results = Path(args.results).resolve()
+            run_official("evaluation/run_evaluation.py",
+                         "--gt", os.path.relpath(gt, VENDOR),
+                         "--results", os.path.relpath(results, VENDOR),
+                         "--out", Path(args.out).resolve(),
                          "--bootstrap", args.bootstrap, "--no-detail")
         else:
             return reproduce(args)

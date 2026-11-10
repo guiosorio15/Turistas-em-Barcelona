@@ -9,6 +9,7 @@ O que já se sabe antes de escrever uma linha de código. **Ler esta secção po
 | [03] | [Concorrência pública]([03]%20Concorrência%20pública.md) | 20+ equipas já publicaram; números e abordagens |
 | [04] | [Resultados negativos]([04]%20Resultados%20negativos.md) | O que já foi tentado e **não** funcionou |
 | [05] | [Ideias]([05]%20Ideias.md) | Hipóteses ranqueadas, com teste e estado |
+| [06] | [Métodos 2026-11-08]([06]%20Métodos%202026-11-08.md) | Varrimento de GitHub, papers, indústria e Reddit |
 
 ## As três conclusões que mudam a estratégia
 

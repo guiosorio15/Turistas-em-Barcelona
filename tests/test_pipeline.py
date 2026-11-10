@@ -2,6 +2,7 @@
 import contextlib
 import io
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -45,12 +46,16 @@ class PipelineTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 cli.load_config(config)
 
-    def test_evaluate_passes_absolute_paths_and_public_gt(self):
+    def test_evaluate_uses_explicit_gt_and_relative_results(self):
         with patch.object(cli, "run_official") as run:
             self.assertEqual(cli.main(["evaluate", "--results", "folder with spaces"]), 0)
             args = run.call_args.args
-            self.assertEqual(args[1:3], ("--gt", "public"))
-            self.assertIn(Path("folder with spaces").resolve(), args)
+            self.assertEqual(args[0], "evaluation/run_evaluation.py")
+            self.assertEqual(args[1], "--gt")
+            self.assertTrue(args[2].endswith("BAR-ATH_possession_gt_public.csv"))
+            self.assertEqual(args[3], "--results")
+            self.assertEqual(args[4], os.path.relpath(
+                Path("folder with spaces").resolve(), cli.VENDOR))
 
     def test_synthetic_tracking_reproduces_identical_csv_and_manifest_hashes(self):
         # Fixture artificial: não contém etiquetas nem posições do jogo fornecido.
